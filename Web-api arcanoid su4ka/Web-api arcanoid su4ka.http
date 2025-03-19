@@ -1,0 +1,6 @@
+@Web_api_arcanoid_su4ka_HostAddress = http://localhost:5129
+
+GET {{Web_api_arcanoid_su4ka_HostAddress}}/weatherforecast/
+Accept: application/json
+
+###
