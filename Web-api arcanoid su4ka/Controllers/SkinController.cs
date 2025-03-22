@@ -5,6 +5,7 @@ using Web_api_arcanoid_su4ka.Model;
 
 namespace Web_api_arcanoid_su4ka.Controllers
 {
+    //ФЛАЛФЫЛАОФЫАоф
     [Route("api/[controller]")]
     [ApiController]
     public class SkinController : Controller

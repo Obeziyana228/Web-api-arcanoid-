@@ -1,5 +1,6 @@
 ﻿using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
+using Microsoft.EntityFrameworkCore;
 using Web_api_arcanoid_su4ka.Interface;
 using Web_api_arcanoid_su4ka.Model;
 
@@ -64,6 +65,12 @@ namespace Web_api_arcanoid_su4ka.Controllers
                 return NotFound();
             }
             return Ok();
+        }
+        [HttpPost("{GOOOOl}")]
+        public async Task<Usermodel> AuthAsync(string login, string password)
+        {
+            var user = await _userInterface.AuthAsync(login, password);
+            return user;
         }
     }
 }

@@ -10,5 +10,6 @@ namespace Web_api_arcanoid_su4ka.Interface
         Task<bool> PostNewUser(Usermodel usermodel);
         Task<bool> Edituserbyid(Usermodel Usermodel);
         Task<bool> DeleteUser(int id);
+        Task<Usermodel> AuthAsync(string login, string password);
     }
 }

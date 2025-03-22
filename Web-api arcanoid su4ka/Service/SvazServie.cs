@@ -57,5 +57,10 @@ namespace Web_api_arcanoid_su4ka.Service
             await _context.SaveChangesAsync();
             return true;
         }
+        public async Task<Usermodel> AuthAsync(string login, string password)
+        {
+            var user = await _context.Usermodels.FirstOrDefaultAsync(u => u.Username == login && u.password == password);
+            return user;
+        }
     }
 }

@@ -9,5 +9,6 @@ namespace Web_api_arcanoid_su4ka.Interface
         Task<bool> PostNewSkin(Skinmodel skinmodel);
         Task<bool> Editskinbyid(Skinmodel skinmodel);
         Task<bool> DeleteSkin(int id);
+        Task<Skinmodel> AuthAsync(string login, string password);
     }
 }
