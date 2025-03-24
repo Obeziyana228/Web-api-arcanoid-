@@ -62,5 +62,12 @@ namespace Web_api_arcanoid_su4ka.Service
             var user = await _context.Usermodels.FirstOrDefaultAsync(u => u.Username == login && u.password == password);
             return user;
         }
+        public async Task<bool> HasSkinAsync(int userId, int ballId)
+        {
+            var userSkin = await _context.Userskinmodel
+                .FirstOrDefaultAsync(us => us.User_id == userId && us.Skind_id == ballId);
+
+            return userSkin != null;
+        }
     }
 }

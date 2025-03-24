@@ -65,5 +65,19 @@ namespace Web_api_arcanoid_su4ka.Controllers
             }
             return Ok();
         }
+        [HttpGet("{userId}/skins/{ballId}")]
+        public async Task<IActionResult> CheckSkinOwnership(int userId, int ballId)
+        {
+            bool hasSkin = await _svazkaInterface.HasSkinAsync(userId, ballId);
+
+            if (hasSkin)
+            {
+                return Ok(new { hasSkin = true });
+            }
+            else
+            {
+                return Ok(new { hasSkin = false });
+            }
+        }
     }
 }

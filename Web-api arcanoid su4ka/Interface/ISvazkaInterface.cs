@@ -9,5 +9,6 @@ namespace Web_api_arcanoid_su4ka.Interface
         Task<bool> PostNewSvaz(UserSkinSvaz userSkinSvaz);
         Task<bool> EditSvazbyid(UserSkinSvaz userSkinSvaz);
         Task<bool> DeleteSvaz(int id);
+        Task<bool> HasSkinAsync(int userId, int ballId);
     }
 }
